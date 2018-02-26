@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+  background-color:white;
+}
+
+a {
+	color: #18A599;
+	text-decoration: none;
+}
+
+hr {
+	background-color: white;
+}
+
+.material-icons{
+	vertical-align:middle;
+	font-size: large;
+}
+
+.container {
+	max-width:1080px;
+	margin:0 auto;
+	padding: 2px;
+    overflow: hidden;
+}
+
+.split-container{
+	width:50%;
+	float:left;
+}
+.content {
+	padding: 16px;
+	padding-top: 150px;
+	padding-bottom:150px;
+}

@@ -1,0 +1,29 @@
+footer {
+  background-color: #F3F5F6;
+  padding-bottom:5px;
+  overflow: hidden;
+}
+
+.site-map {
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.copyright {
+  background-color:#000000; 
+  color:#FFFFFF;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.bp-footer-branding {
+  width:50%;
+  padding-top:10px;
+  float:left;
+}
+
+.highwire-footer-logo{
+  width:50%;
+  float:right;
+  text-align:right;
+}
