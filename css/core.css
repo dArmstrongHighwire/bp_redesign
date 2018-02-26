@@ -1,0 +1,16 @@
+#noscript-warning {
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    color: #FFF;
+    background-color: #AE0000;
+    padding: 5px 0;
+}
+
+body {
+  margin: 0;
+  font-family:'Roboto', sans-serif;
+  background-color:white;
+}

@@ -4,16 +4,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<!--<link rel="stylesheet/less" type="text/css" href="./css/less/main.less" />
-<link rel="stylesheet/less" type="text/css" href="./css/less/header.less" />
-<script src="./js/less.min.js" ></script>-->
+<link href="./css/core.css" rel="stylesheet">
+<link href="./css/footer.css" rel="stylesheet">
+<noscript>
 <link href="./css/main.css" rel="stylesheet">
 <link href="./css/header.css" rel="stylesheet">
-<link href="./css/footer.css" rel="stylesheet">
+</noscript>
+<link rel="stylesheet/less" type="text/css" href="./less/main.less" />
+<link rel="stylesheet/less" type="text/css" href="./less/header.less" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
 </head>
 <body>
-
-<header class="header-stick">
+<header>
+	<noscript>
+		<div id="noscript-warning">BenchPress works best with JavaScript enabled</div>
+	</noscript>
 	<div class="container">
 		<div class="split-container">
 			<a href"#"><img class="journal-logo" src="https://dmm-bp-dev.highwiretest.com/icons/widgets/journal/dmm/title.png" alt="DMM Logo" /></a>
@@ -29,13 +34,13 @@
 			<div class="header-nav-bar">
 				<div class="dropdown">
 					<button class="dropbtn">Actions 
-						<i class="material-icons">arrow_drop_down</i>
+						<i class="material-icons">expand_more</i>
 					</button>
 					<div class="dropdown-content">
 						<a href="#"><i class="material-icons">input</i> Submit a Manuscript</a>
 						<a href="#"><i class="material-icons">history</i> View Submission History</a>
 						<a href="#"><i class="material-icons">history</i> View Review History</a>
-						<hr>
+						<hr/>
 						<div class="sub-dropdown">
 							<button class ="sub-dropbtn">Account Management 
 								<i class="material-icons">chevron_right</i>
@@ -46,7 +51,7 @@
 								<a href="#">Link 1 C</a>
 							</div>
 						</div>
-						<hr>
+						<hr/>
 						<div class="sub-dropdown">
 							<button class ="sub-dropbtn">Reports 
 								<i class="material-icons">chevron_right</i>
@@ -61,7 +66,7 @@
 				</div> 
 				<div class="dropdown">
 					<button class="dropbtn">My areas 
-						<i class="material-icons">arrow_drop_down</i>
+						<i class="material-icons">expand_more</i>
 					</button>
 					<div class="dropdown-content">
 						<a href="#">Link 1</a>
@@ -73,17 +78,17 @@
 					<button class="dropbtn">
 						<i class="material-icons">account_circle</i>
 						Darren 
-						<i class="material-icons">arrow_drop_down</i>
+						<i class="material-icons">expand_more</i>
 					</button>
 					<div class="dropdown-content">
 						<a href="#"><i class="material-icons">edit</i> Edit personal information</a>
 						<a href="#"><i class="material-icons">power_settings_new</i> Sign out</a>
-						<hr>
+						<hr/>
 						<a href="#">Help with page / area</a>
 						<a href="#">FAQ</a>
-						<hr>
+						<hr/>
 						<a href="#"><i class="material-icons">feedback</i> Give feedback</a>
-						<hr>
+						<hr/>
 						<a href="#"><i class="material-icons">warning</i> Emergency contact procedure</a>
 					</div>
 				</div> 
