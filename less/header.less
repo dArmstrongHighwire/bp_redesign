@@ -8,6 +8,11 @@ header {
   top: 0;
   width: 100%;
   border-bottom: solid 1px @tertiary-color;
+  
+  @media only screen and (max-height: 800px) {
+	position:inherit;
+  }
+  
 }
 
 .header-bp-branding{
@@ -22,6 +27,9 @@ header {
 
 .journal-logo{
 	margin-top: 20px;
+	@media only screen and (max-width: 900px){
+		width: 90%;
+	}
 }    
 
 .header-nav-bar{
@@ -67,10 +75,10 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		left:0;
+		@media only screen and (max-width: 900px){
+			height:1px;
+		}
 	}
-}
-
-.dropdown-content {
 	a {
 		float: none;
 		padding: 12px 16px;
@@ -80,6 +88,16 @@ header {
 		&:hover{
 			background: @highlight-color;
 		}
+	}
+	@media only screen and (max-width: 900px){
+		border-bottom:solid 1px @tertiary-color;
+		.make-content-screen-width;
+	}
+}
+
+.end-nav-option {
+	@media only screen and (max-width: 1200px){
+		min-width:auto;
 	}
 }
 
@@ -115,5 +133,12 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		top: 0;
+		@media only screen and (max-width: 900px){
+			position:inherit;
+		}
+	}
+	@media only screen and (max-width: 900px){
+		position:inherit;
+		.make-content-screen-width;
 	}
 }
