@@ -9,7 +9,7 @@ header {
   width: 100%;
   border-bottom: solid 1px @tertiary-color;
   
-  @media only screen and (max-height: 800px) {
+  @media only screen and (max-height: 700px) {
 	position:inherit;
   }
   
@@ -27,8 +27,9 @@ header {
 
 .journal-logo{
 	margin-top: 20px;
-	@media only screen and (max-width: 900px){
+	@media only screen and (max-width: 1000px){
 		width: 90%;
+		margin-left:5%;
 	}
 }    
 
@@ -48,9 +49,6 @@ header {
     float: left;
     overflow: hidden;
 	width:33.33%;
-	&:hover .dropdown-content {
-		display: block;
-	}
 }
 
 .dropdown {
@@ -75,7 +73,7 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		left:0;
-		@media only screen and (max-width: 900px){
+		@media only screen and (max-width: 1000px){
 			height:1px;
 		}
 	}
@@ -89,8 +87,10 @@ header {
 			background: @highlight-color;
 		}
 	}
-	@media only screen and (max-width: 900px){
-		border-bottom:solid 1px @tertiary-color;
+	@media only screen and (max-width: 1000px){
+		min-width:33%;
+	}
+	@media only screen and (max-width: 500px){
 		.make-content-screen-width;
 	}
 }
@@ -105,9 +105,6 @@ header {
     float: none;
     overflow: hidden;
 	width:100%;
-	&:hover .sub-dropdown-content {
-		display: block;
-	}
 }
 
 .sub-dropdown{
@@ -133,11 +130,11 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		top: 0;
-		@media only screen and (max-width: 900px){
+		@media only screen and (max-width: 1000px){
 			position:inherit;
 		}
 	}
-	@media only screen and (max-width: 900px){
+	@media only screen and (max-width: 500px){
 		position:inherit;
 		.make-content-screen-width;
 	}

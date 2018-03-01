@@ -82,8 +82,9 @@ header {
     background-color: #F3F5F6;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover >  .dropdown-content {
     display: block;
+	-webkit-transition-delay: 0s;
 }
 
 .sub-dropdown {
@@ -110,8 +111,9 @@ header {
 	background-color: #F3F5F6;
 }
 
-.sub-dropdown:hover .sub-dropdown-content {
+.sub-dropdown:hover > .sub-dropdown-content{
     display: block;
+	-webkit-transition-delay: 0s;
 }
 
 .sub-dropdown-content {
@@ -140,36 +142,48 @@ header {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
 	.journal-logo{
 		width: 90%;
+		margin-left:5%;
 	}
 	
 	.dropdown-content {
 		border-bottom:solid 1px black;
 	}
+	
 	.dropdown-content:before { 
 		height:1px;
 	}
 	
-	.sub-dropdown-content, .dropdown-content{
-		width:100%;
-		margin:0%;
-		left: 0;		
+	.dropdown-content{
+		min-width:33%;
+		margin:0%;	
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.sub-dropbtn i {
+		display: none;
 	}
 	.sub-dropdown-content {
 		position:inherit;
+		display:block;
 	}
 	.sub-dropdown-content:before {
 		position:inherit;
 	}
-	
-	.end-nav-option{
-		min-width:auto;
+	.sub-dropdown-content a {
+		margin-left: 10px;
+	}
+	.sub-dropdown-content, .dropdown-content{
+		width:100%;
+		margin:0%;	
+		left:0;
 	}
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 700px) {
 	header {
 		position:inherit;
 	}

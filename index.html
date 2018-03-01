@@ -15,6 +15,7 @@
 <link rel="stylesheet/less" type="text/css" href="./less/main.less" />
 <link rel="stylesheet/less" type="text/css" href="./less/header.less" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -33,21 +34,21 @@
 			<div class="header-journal-name">
 				<strong>Disease Models & Mechanisms</strong>
 			</div>
-			<div class="header-nav-bar">
+			<div id="nav-bar" class="header-nav-bar">
 				<div class="dropdown">
-					<button class="dropbtn">Actions 
+					<button class="dropbtn" tabindex="0">Actions 
 						<i class="material-icons">expand_more</i>
 					</button>
-					<div class="dropdown-content">
+					<div class="dropdown-content" tabindex="0">
 						<a href="#"><i class="material-icons">input</i> Submit a Manuscript</a>
 						<a href="#"><i class="material-icons">history</i> View Submission History</a>
 						<a href="#"><i class="material-icons">history</i> View Review History</a>
 						<hr/>
 						<div class="sub-dropdown">
-							<button class ="sub-dropbtn">Account Management 
+							<button class ="sub-dropbtn" tabindex="0">Account Management 
 								<i class="material-icons">chevron_right</i>
 							</button>
-							<div class="sub-dropdown-content">
+							<div class="sub-dropdown-content" tabindex="0">
 								<a href="#">Link 1 A</a>
 								<a href="#">Link 1 B</a>
 								<a href="#">Link 1 C</a>
@@ -55,10 +56,10 @@
 						</div>
 						<hr/>
 						<div class="sub-dropdown">
-							<button class ="sub-dropbtn">Reports 
+							<button class ="sub-dropbtn" tabindex="0">Reports 
 								<i class="material-icons">chevron_right</i>
 							</button>
-							<div class="sub-dropdown-content">
+							<div class="sub-dropdown-content" tabindex="0">
 								<a href="#">Link 1 A</a>
 								<a href="#">Link 1 B</a>
 								<a href="#">Link 1 C</a>
@@ -67,22 +68,22 @@
 					</div>
 				</div> 
 				<div class="dropdown">
-					<button class="dropbtn">My areas 
+					<button class="dropbtn" tabindex="1">My areas 
 						<i class="material-icons">expand_more</i>
 					</button>
-					<div class="dropdown-content">
+					<div class="dropdown-content" tabindex="1">
 						<a href="#">Link 1</a>
 						<a href="#">Link 2</a>
 						<a href="#">Link 3</a>
 					</div>
 				</div> 
 				<div class="dropdown">
-					<button class="dropbtn">
+					<button class="dropbtn" tabindex="1">
 						<i class="material-icons">account_circle</i>
 						Darren 
 						<i class="material-icons">expand_more</i>
 					</button>
-					<div class="dropdown-content end-nav-option">
+					<div class="dropdown-content end-nav-option" tabindex="1">
 						<a href="#"><i class="material-icons">edit</i> Edit personal information</a>
 						<a href="#"><i class="material-icons">power_settings_new</i> Sign out</a>
 						<hr/>
@@ -140,5 +141,56 @@
 		</div>
 	</div>
 </footer>
+<script>
+$(document).ready(function(){
+  $('.dropdown button').on("click", function(e){
+    $(this).next('div').toggle();
+	
+	$('.dropbtn').on('click', function(e){
+		$( ".dropbtn" ).each(function() {
+			if(!$(this).is(':focus')){
+				$(this).next('div').hide();
+			}
+		});
+		$( ".sub-dropbtn" ).each(function() {
+			if(!$(this).is(':focus')){
+				$(this).next('div').hide();
+			}
+		});
+	});
+	
+	$('.dropdown-content a').on('click', function(e){
+		var subDropdownLinkHasBeenClicked = false;
+		$(".sub-dropdown-content").each(function(){
+			$(".sub-dropdown-content a").each(function(){
+				if($(this).is(':focus')){
+				 subDropdownLinkHasBeenClicked = true;
+				}
+			});
+			if(!subDropdownLinkHasBeenClicked){
+				$(this).hide();	
+			}
+		});
+	});
+	
+	$('.sub-dropbtn').on('click', function(e){
+		$( ".sub-dropbtn" ).each(function() {
+			if(!$(this).is(':focus')){
+				$(this).next('div').hide();
+			}
+		});
+	});
+	
+	$(document).on("click", function(event){
+		if (!document.getElementById('nav-bar').contains(event.target)){
+			$('.dropdown button').each(function(){
+				$(this).next('div').hide();
+			}); 
+		}
+    });
+	
+  });
+});
+</script>
 </body>
 </html>

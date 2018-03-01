@@ -29,7 +29,7 @@ hr {
 	padding-bottom:150px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
 	hr {
 		-webkit-margin-before: 0em;
 		-webkit-margin-after: 0em;
