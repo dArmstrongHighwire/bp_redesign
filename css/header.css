@@ -163,6 +163,9 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
+	.header-journal-name{ 
+		display:none;
+	}
 	.sub-dropbtn i {
 		display: none;
 	}
