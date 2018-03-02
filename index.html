@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<title>Header and Footer Demo</title>
+		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Online Management Submission System">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS Stylesheets -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,7 +33,7 @@
 			</noscript>
 			<div class="container">
 				<div class="split-container">
-					<a href"#"><img class="journal-logo" src="https://dmm-bp-dev.highwiretest.com/icons/widgets/journal/dmm/title.png" alt="DMM Logo" /></a>
+					<a href="#"><img class="journal-logo" src="https://dmm-bp-dev.highwiretest.com/icons/widgets/journal/dmm/title.png" alt="DMM Logo" /></a>
 				</div>
 				<div class="split-container">
 					<div class="header-bp-branding">
@@ -40,55 +44,185 @@
 						<strong>Disease Models & Mechanisms</strong>
 					</div>
 					<div id="nav-bar" class="header-nav-bar">
+						<!-- Available Actions Dropdown -->
 						<div class="dropdown">
-							<button class="dropbtn" tabindex="0">Actions 
+							<button class="dropbtn">Actions 
 								<i class="material-icons">expand_more</i>
 							</button>
-							<div class="dropdown-content" tabindex="0">
+							<div class="dropdown-content">
 								<a href="#"><i class="material-icons">input</i> Submit a Manuscript</a>
 								<a href="#"><i class="material-icons">history</i> View Submission History</a>
 								<a href="#"><i class="material-icons">history</i> View Review History</a>
 								<hr/>
+								<!-- Reports Options -->
 								<div class="sub-dropdown">
-									<button class ="sub-dropbtn" tabindex="0">Account Management 
+									<button class ="sub-dropbtn">Reports 
 										<i class="material-icons">chevron_right</i>
 									</button>
-									<div class="sub-dropdown-content" tabindex="0">
-										<a href="#">Link 1 A</a>
-										<a href="#">Link 1 B</a>
-										<a href="#">Link 1 C</a>
+									<div class="sub-dropdown-content-expand">
+										<a href="#">Editorial & Management Reports</a>
+										<hr/>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">Keyword Reports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">General Turnaround Time Reports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">Manuscript Reports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#">LONG NAME IN HERE HOW DOES IT DISPLAY</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">People Reports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">Reviewer Reports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">New Exports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">Previous Exports 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
 									</div>
 								</div>
-								<hr/>
+								<!-- Maintenance Options -->
 								<div class="sub-dropdown">
-									<button class ="sub-dropbtn" tabindex="0">Reports 
+									<button class ="sub-dropbtn">Maintenance 
 										<i class="material-icons">chevron_right</i>
 									</button>
-									<div class="sub-dropdown-content" tabindex="0">
-										<a href="#">Link 1 A</a>
-										<a href="#">Link 1 B</a>
-										<a href="#">Link 1 C</a>
+									<div class="sub-dropdown-content-expand">
+										<a href="#">Journal and User Maintenance</a>
+										<hr/>
+										<div class="view-options">
+											<button class ="view-options-dropbtn">Account Management 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div><div class="view-options">
+											<button class ="view-options-dropbtn">Email Templates 
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div><div class="view-options">
+											<button class ="view-options-dropbtn">Journal Management
+												<i class="material-icons">expand_more</i>
+											</button>
+											<div class="available-options">
+												<a href="#"> Link A</a>
+												<a href="#"> Link B</a>
+												<a href="#"> Link C</a>
+												<a href="#"> Link D</a>
+												<a href="#"> Link E</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Search Options -->
+								<div class="sub-dropdown">
+									<button class ="sub-dropbtn">Searching 
+										<i class="material-icons">chevron_right</i>
+									</button>
+									<div class="sub-dropdown-content">
+										<a href="#">Basic Search</a>
+										<a href="#">Advanced Search</a>
 									</div>
 								</div>
 							</div>
 						</div> 
+						<!-- Available Roles Dropdown -->
 						<div class="dropdown">
-							<button class="dropbtn" tabindex="1">My areas 
+							<button class="dropbtn">My areas 
 								<i class="material-icons">expand_more</i>
 							</button>
-							<div class="dropdown-content" tabindex="1">
+							<div class="dropdown-content">
 								<a href="#">Link 1</a>
 								<a href="#">Link 2</a>
 								<a href="#">Link 3</a>
 							</div>
 						</div> 
+						<!-- Account Options dropdown -->
 						<div class="dropdown">
-							<button class="dropbtn" tabindex="1">
+							<button class="dropbtn">
 								<i class="material-icons">account_circle</i>
 								Darren 
 								<i class="material-icons">expand_more</i>
 							</button>
-							<div class="dropdown-content end-nav-option" tabindex="1">
+							<div class="dropdown-content end-nav-option">
 								<a href="#"><i class="material-icons">edit</i> Edit personal information</a>
 								<a href="#"><i class="material-icons">power_settings_new</i> Sign out</a>
 								<hr/>
@@ -96,7 +230,6 @@
 								<a href="#">FAQ</a>
 								<hr/>
 								<a href="#"><i class="material-icons">feedback</i> Give feedback</a>
-								<hr/>
 								<a href="#"><i class="material-icons">warning</i> Emergency contact procedure</a>
 							</div>
 						</div> 
@@ -140,7 +273,7 @@
 						<strong>BenchPress</strong> | Manuscript Submission System
 					</div>
 					<div class="highwire-footer-logo">
-						<img height="40px" src="https://www.ariessys.com/wp-content/uploads/A-HighWireLogo-transparent.png" />
+						<img src="https://www.ariessys.com/wp-content/uploads/A-HighWireLogo-transparent.png" alt="HighWire Press" />
 					</div>
 				</div>
 			</div>

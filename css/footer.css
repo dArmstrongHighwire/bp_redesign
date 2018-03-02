@@ -27,3 +27,7 @@ footer {
   float:right;
   text-align:right;
 }
+
+.highwire-footer-logo img{
+	height:40px;
+}

@@ -13,6 +13,10 @@ header {
 	position:inherit;
   }
   
+  @media only screen and (max-width: 500px){
+	position:inherit;
+  }
+  
 }
 
 .header-bp-branding{
@@ -76,7 +80,7 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		left:0;
-		@media only screen and (max-width: 1000px){
+		@media only screen and (max-width: 500px){
 			height:1px;
 		}
 	}
@@ -108,9 +112,6 @@ header {
     float: none;
     overflow: hidden;
 	width:100%;
-}
-
-.sub-dropdown{
 	.sub-dropbtn {
 		text-align:left;
 		.change-button-appearance;
@@ -133,12 +134,72 @@ header {
 		background: @tertiary-color;
 		position: absolute;
 		top: 0;
-		@media only screen and (max-width: 1000px){
+		@media only screen and (max-width: 500px){
 			position:inherit;
 		}
 	}
 	@media only screen and (max-width: 500px){
 		position:inherit;
 		.make-content-screen-width;
+		a {
+			padding-left:5%;
+		}
+	}
+}
+
+.sub-dropdown-content-expand {
+    .design-of-dropdown-list;
+	margin-left: 100%;
+    margin-top: -50%;
+	width:400px;
+	&:before {
+		content: '';
+		width: 4px;
+		height: 100%;
+		background: @tertiary-color;
+		position: absolute;
+		top: 0;
+		@media only screen and (max-width: 500px){
+			position:inherit;
+		}
+	}
+	@media only screen and (max-width: 500px){
+		position:inherit;
+		.make-content-screen-width;
+		a {
+			padding-left:5%;
+		}
+	}
+}
+
+.view-options {
+	float: none;
+    overflow: hidden;
+	width:100%;
+	.view-options-dropbtn {
+		text-align:left;
+		.change-button-appearance;
+		border-bottom:solid 1px @tertiary-color;
+	
+		@media only screen and (max-width: 500px){
+			padding-left:5%;
+		}
+	}
+	&:hover {
+		.view-options-dropbtn{
+			background: @highlight-color;
+		}
+	}
+}
+
+.available-options {
+	display:none;
+	border-bottom:solid 1px @tertiary-color;
+	overflow: hidden;
+	a {
+	    width: 45%;
+		float: left;
+		padding-left: 5%;
+		padding-right: 0;
 	}
 }

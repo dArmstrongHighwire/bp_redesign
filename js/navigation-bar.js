@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	displayDropdownOnClick();
 	hideSubDropdownIfNotInUse();
-	hideSubDropdownWhenOtherSubDropdownIsInUse();
+	hideSubDropdownWhenOtherIsInUse();
+	hideSubDropdownsAvailableOptionsWhenOtherIsInUse();
 	hideDropdownsIfClickIsOutsideOfNavBar();
 });
 
@@ -15,7 +16,12 @@ function displayDropdownOnClick(){
 					$(this).next('div').hide();
 				}
 			});
-			$( ".sub-dropbtn" ).each(function() {
+			$('.sub-dropbtn').each(function() {
+				if(!$(this).is(':focus')){
+					$(this).next('div').hide();
+				}
+			});
+			$('.view-options-dropbtn').each(function(){
 				if(!$(this).is(':focus')){
 					$(this).next('div').hide();
 				}
@@ -30,7 +36,29 @@ function hideSubDropdownIfNotInUse(){
 		$(".sub-dropdown-content").each(function(){
 			$(".sub-dropdown-content a").each(function(){
 				if($(this).is(':focus')){
-				 subDropdownLinkHasBeenClicked = true;
+					subDropdownLinkHasBeenClicked = true;
+				}
+			});
+			if(!subDropdownLinkHasBeenClicked){
+				$(this).hide();	
+			}
+		});
+		subDropdownLinkHasBeenClicked = false;
+		$('.sub-dropdown-content-expand').each(function(){
+			$('.sub-dropdown-content-expand a').each(function(){
+				if($(this).is(':focus')){
+					subDropdownLinkHasBeenClicked = true;
+				}
+			});
+			if(!subDropdownLinkHasBeenClicked){
+				$(this).hide();	
+			}
+		});
+		subDropdownLinkHasBeenClicked = false;
+		$('.available-options').each(function(){
+			$('.available-options a').each(function(){
+				if($(this).is(':focus')){
+					subDropdownLinkHasBeenClicked = true;
 				}
 			});
 			if(!subDropdownLinkHasBeenClicked){
@@ -40,14 +68,30 @@ function hideSubDropdownIfNotInUse(){
 	});
 }
 
-function hideSubDropdownWhenOtherSubDropdownIsInUse(){
+function hideSubDropdownWhenOtherIsInUse(){
 	$('.sub-dropbtn').on('click', function(e){
 		$( ".sub-dropbtn" ).each(function() {
 			if(!$(this).is(':focus')){
 				$(this).next('div').hide();
 			}
 		});
+		$( ".view-options-dropbtn" ).each(function() {
+			if(!$(this).is(':focus')){
+				$(this).next('div').hide();
+			}
+		});
 	});
+}
+
+function hideSubDropdownsAvailableOptionsWhenOtherIsInUse(){
+	$('.view-options-dropbtn').on('click', function(e){
+		$( ".view-options-dropbtn" ).each(function() {
+			if(!$(this).is(':focus')){
+				$(this).next('div').hide();
+			}
+		});
+	});
+	
 }
 
 function hideDropdownsIfClickIsOutsideOfNavBar(){
